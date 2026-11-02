@@ -1,13 +1,13 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        # transferred from leetcode
-        phrase = s.lower()
-        cleaned = ""
+        # remembering old solution, need to go through all solutions
+        s = s.lower()   # case insensitive
 
-        for i, l in enumerate(phrase):
-            if (l.isalnum()):
-                cleaned += l
-        
-        reverse = "".join(reversed(cleaned)) # have to use reversed with join
+        cleaned = ""
+        for char in s:
+            if char.isalnum():
+                cleaned += char
+
+        reverse = "".join(reversed(cleaned))
 
         return reverse == cleaned
